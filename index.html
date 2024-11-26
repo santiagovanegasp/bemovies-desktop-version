@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    
+
+
+</head>
+
+<body>
+
+    <header> 
+        <div class="toolbarUP">
+            <h4 class="toolTitreRightUP"><span class="colorSpan">BE</span>MOVIES</h4>
+            <!-- need to be a tags or buttons -->
+            <a href="#search-section"><p>SEARCH</p></a>
+            <a href="#search-section"><p>LATEST</p></a>
+            <a href="#movie-genre-tab"><p>GENRES</p></a>
+            <a id="registerBtnHeader">REGISTER</a>
+            <!-- rajouter lien Modale avec la class "connection-site1" a".formulaire-connection-modale-BGround" ( change display) -->
+            <a class="connection-site1">SIGNIN</a>
+        </div>
+
+
+    </header>
+   
+    <div class="container-recherche" id="search-section">
+        <!-- Prendre le input class inputRecherche pour chercher le film dans APi et implanter  le texte dans class"InputResult" -->
+        <input type="text" placeholder="Choix du film" class="inputRecherche"><button class="bouton-recherche">&#11106; </button>
+    </div>
+
+
+    <div class="swiper-container" id="swiper-container1" >
+        <!-- Rajouter le Texte de l'inputRecherche dans la span class"inputResult" -->
+        <p class="text-section" id="text-results-for">Results for <span class="inputResult" id="inputResult"></span></p>
+
+        <div class="swiper-wrapper" id="swiper-container-search" >
+           <!-- a chaque nouvelle image crée une div qui reprend la même class et une balise img avec un FOR ou While
+              et supprime a chaque nouveau CLICK -->
+            <div class="swiper-slide"><img src="https://fr.web.img6.acsta.net/pictures/22/01/18/10/13/5983633.jpg"
+                    alt=""></div>
+            <div class="swiper-slide"><img src="https://media-animation.be/IMG/jpg/image.jpg" alt=""></div>
+
+            <div class="swiper-slide"><img
+                    src="https://poster.moncinepack.fr/FR/poster/9A1DCF64/320/NVKZ5.jpg?optimizer=image" alt=""></div>
+
+            <div class="swiper-slide"><img
+                    src="https://cinemedia.cinedigitalmanager.com/medias//1/7c/7c3b8497-bec7-490c-91ad-bb26c3c0ba9e.jpeg"
+                    alt=""></div>
+
+            <div class="swiper-slide"><img
+                    src="https://cdn.sortiraparis.com/images/80/98390/827545-e-t-l-extraterrestre-pour-les-40-ans-du-film-culte-une-projection-exceptionnelle-et-un-livre.jpg"
+                    alt=""></div>
+        </div> 
+
+        <!-- <div class="swiper-pagination"></div> -->
+
+        <div class="swiper-button-next" id="swiper-button-next1"> <img src="Vectorright.svg" alt="" id="imgnext1"></div>
+        <div class="swiper-button-prev" id="swiper-button-prev1"> <img src="nuevo left.svg"alt=""></div>
+    </div>
+
+    <div class="swiper-container swiper-container2">
+        <p class="text-section">Latest releases</p>
+        <div class="swiper-wrapper" id="swiper-container-latest">
+             <!-- a chaque nouvelle image crée une div qui reprend la même class et une balise img avec un FOR ou While
+              et supprime a chaque nouveau CLICK -->
+            <!-- <div class="swiper-slide">
+                <img src="https://fr.web.img6.acsta.net/pictures/22/01/18/10/13/5983633.jpg" alt="">
+                    
+                </div>
+            <div class="swiper-slide"><img src="https://media-animation.be/IMG/jpg/image.jpg" alt=""></div>
+            <div class="swiper-slide"><img
+                    src="https://poster.moncinepack.fr/FR/poster/9A1DCF64/320/NVKZ5.jpg?optimizer=image" alt=""></div>
+            <div class="swiper-slide"><img
+                    src="https://cinemedia.cinedigitalmanager.com/medias//1/7c/7c3b8497-bec7-490c-91ad-bb26c3c0ba9e.jpeg"
+                    alt=""></div>
+            <div class="swiper-slide"><img
+                    src="https://cdn.sortiraparis.com/images/80/98390/827545-e-t-l-extraterrestre-pour-les-40-ans-du-film-culte-une-projection-exceptionnelle-et-un-livre.jpg"
+                    alt=""></div> -->
+        </div>
+
+        <!-- <div class="swiper-pagination"></div> -->
+        <div class="swiper-button-next swiper-button-next2" id="swiper-button-next2"> <img src="Vectorright.svg" alt=""></div> 
+        <div class="swiper-button-prev swiper-button-prev2" id="swiper-button-prev2"> <img src="nuevo left.svg"alt=""></div> 
+    </div>
+
+
+
+
+
+    <p class="movie-genre" id="movie-genre-tab">Movies by genre</p>
+   <div class="genre">
+       <!-- Reliez les bouton par genre de recherche dans le JS -->
+        <button class="comedy">Comedy</button>
+        <button class="drama">Drama</button>
+        <button class="action">Action</button>
+        <button class="romance">Romance</button>
+        <button class="fantasy">Fantasy</button>
+        <button class="animation">Animation</button>
+        
+    </div>
+    <div class="ligne"></div>
+    
+        <div class="swiper-container swiper-container3">
+            <p class="text-section">Showing now: <span id="text-result-genre"> Thriller</span></p>
+        <div class="swiper-wrapper" id="swiper-container-genre">
+             <!-- a chaque nouvelle image crée une div qui reprend la même class et une balise img avec un FOR ou While
+              et supprime a chaque nouveau CLICK -->
+            <!-- <div class="swiper-slide"><img src="https://m.media-amazon.com/images/I/31hygTcuzHL._AC_UF1000,1000_QL80_.jpg"
+                    alt=""></div>
+            <div class="swiper-slide"><img src="https://media-animation.be/IMG/jpg/image.jpg" alt=""></div>
+            <div class="swiper-slide"><img
+                    src="https://poster.moncinepack.fr/FR/poster/9A1DCF64/320/NVKZ5.jpg?optimizer=image" alt=""></div>
+            <div class="swiper-slide"><img
+                    src="https://fr.web.img6.acsta.net/c_310_420/pictures/21/10/13/09/15/1601456.jpg"
+                    alt=""></div>
+            <div class="swiper-slide"><img
+                    src="https://cdn.sortiraparis.com/images/80/98390/827545-e-t-l-extraterrestre-pour-les-40-ans-du-film-culte-une-projection-exceptionnelle-et-un-livre.jpg"
+                    alt=""></div> -->
+        </div>
+
+        <!-- <div class="swiper-pagination"></div> -->
+        <div class="swiper-button-next swiper-button-next3" id="swiper-button-next3"> <img src="Vectorright.svg" alt="" id="imgnext1"></div> 
+        <div class="swiper-button-prev swiper-button-prev3" id="swiper-button-prev3"> <img src="nuevo left.svg" alt="" id="imgnext1"></div> 
+    </div>
+
+
+
+    <footer>
+    <div class="toolbarDown">
+        <h4 class="toolTitreRightDown"><span class="colorSpan">BE</span>MOVIES</h4>
+        <div class="tooldown">
+        <a href="#search-section">SEARCH</a>
+        <a href="#search-section">LATEST</a>
+        <a href="#movie-genre-tab">GENRES</a>
+        <a id="registerBtnFooter">REGISTER</a>
+        <!-- rajouter lien Modale avec la class "connection-site2" a".formulaire-connection-modale-BGround" ( change display) -->
+        <a class="connection-site2">SIGNIN</a>
+        </div>
+        <p class="copyrith">@2024 - All rights reserved</p>
+    </div>
+</footer>
+    
+
+
+
+
+
+<div class="formulaire-connection-modale-BGround">
+   
+    <div class="formulaire-connection-POP">
+        <!-- Utilise le XTarget-global1 pour l'event click qui va enlever le modale la petite X juste avec un display none -->
+        <div class="XTarget-global1" id="XTarget-global1"> 
+            <div id="close-btn-conect-Modal"><img  class= "elispe" src="Group 9.png" alt=""></div>
+        <!-- <div><img  class= "elispe" src="Ellipse.png" alt=""></div>
+        <div class="XTarget1"><p>l</p> </div>
+        <div class="XTarget2"><p>l</p></div> -->
+    </div>
+        <div class="sign">
+            
+       <p id="signuptext1"> SIGNUP </p>  </div> <div class="log"><p id="logintext1"> LOGIN </p>
+    
+       <input class="modaleInputUser" placeholder="UserName" type="text">
+      
+       <input class="modaleInputPass" placeholder="UserPassword" type="password">
+       <p class="checkbox"> <input type="checkbox"> Remember me</p>
+       <button class="modaleBtnLogin">LOGIN</button>
+       <div class="forget">
+       <p>I forgot my password</p><br>
+       <p>Not a member yer ? <span class="signUp"> Sign up</span></p>
+    </div>
+    </div>
+    
+    
+      
+    </div>
+</div>
+
+
+<div class="modale-film-BGound">
+    <div  class="modale-film">
+        <div class="XTarget-global1"> 
+            <div id="close-btn-film-Modal"><img  class= "elispe" src="Group 9.png" alt=""></div>
+            <!-- <div class="XTarget1"><p>l</p> </div>
+            <div class="XTarget2"><p>l</p></div> ne functionnent pas pour fermer -->
+        </div>
+        <div class="image-film"> <img class="swiper-slide" src="https://media-animation.be/IMG/jpg/image.jpg" alt=""></div>
+        <div class="titre-film">Jean le pro</div>
+        <div class="annee-film">1972</div>
+        <div class="note-film">★100</div>
+        <div class="genre-film">drame/action</div>
+        <div class="synopsis-film"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, placeat vitae? At error, in architecto dolor reiciendis tempore laudantium explicabo, dolores a modi ipsa blanditiis atque obcaecati temporibus quasi incidunt.   
+        </p></div>
+        <div class="cast-film"></div><span class="spanCast">Cast:</span><p class="cast-here">Bonjour Marlon Brando, Al Pacino, James Caan,
+            Robert Duval</p>
+            
+       
+            
+        </div>
+    </div>
+
+
+    
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="app.js" defer></script>
+</body>
+
+</html>
+

@@ -1,0 +1,886 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+
+*{  margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+    body{
+    background-color: #1f2124;
+    height: 100%
+    }
+
+    a{
+        text-decoration: none ;
+    }
+
+
+
+
+        /* Haut de page Toolbar ------------------*/
+.toolTitreRightUP{
+  display: flex;
+    justify-content: left;
+    align-items: flex-start;
+   width: 700px;
+   font-size: 36px;
+   color: aliceblue;
+   margin: -10px;
+   margin-right: 250px;
+   font-family: "Inria Sans";
+    font-weight: 700;
+}
+
+
+.colorSpan{
+    color: rgb(199, 2, 9);
+}
+
+.toolbarUP{
+    color: aliceblue;
+    padding: 25px;
+    font-size: 14px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: right;
+    gap: 15px;
+    background-color: #141517
+}
+
+.toolbarUP a{
+    color: aliceblue;
+    font-size: 14px;
+    /*mine*/
+    cursor: pointer;
+    color: aliceblue;
+    font-size: 14px;
+    font-family: "Inria Sans", sans-serif;
+    font-weight: 700;
+    line-height: 17px;
+    /*mine*/
+    cursor: pointer;
+}
+
+
+
+.toolbarUP p{
+    font-family: "Inria Sans";
+    cursor: pointer;
+}
+
+/* .connection-site1{
+    background-color: rgb(20, 21, 23);
+    font-size: 14px;
+    color: aliceblue;
+    border: 0px;
+    font-family: "Inria Sans";
+    cursor: pointer;
+   
+} */
+
+        /* Haut de page Toolbar FIN-------------------------*/
+        /* Input + bouton de recherche--------------------- */
+.container-recherche {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100px; 
+    
+}
+
+.inputRecherche{
+
+    border: 5px;
+    border-color: #141517;
+    justify-content: right;
+    align-items: center;
+    height: 38px;
+    padding-left: 10px;
+    width: 232px;
+    border-radius: 10px 0 0 10px;
+    margin-top: -80px;
+    
+} 
+.bouton-recherche{
+    cursor: pointer;
+    border: 5px;
+    border-color: #141517;
+background-color: #CC0000;
+color: aliceblue;
+    font-size: 18px ;
+    height: 38px;
+    width: 44px;
+    margin-top: -80px;
+    border-radius: 0 10px 10px 0
+}
+        /* Input + bouton de recherche FIN--------------------- */
+        /* Resultat de recherche , Image de recherche (SWIPER)--------------- */
+.swiper-container{
+   max-width: 1075px;
+   max-height: 351px;
+   width: 80%;
+   margin: auto;
+   /* border: dashed red; */
+   overflow: hidden;
+   display: block;
+   
+}
+
+.swiper-container p{
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+.swiper-slide img {
+    cursor: pointer;
+    width: 234px;
+    height: 351px;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+}
+.swiper-button-next{
+    position: absolute; 
+    transform: translateY(300%); 
+    z-index: 1;
+    color: white; 
+    font-size: 30px; 
+    margin: 100px;
+    /* border-radius: 50%;  */
+}
+
+
+
+.swiper-button-prev{
+    position: absolute; 
+    transform: translateY(300%); 
+    z-index: 1;
+    color: white; 
+    font-size: 30px; 
+    margin: 100px;
+    border-radius: 50%; 
+
+}
+
+
+/*  swiper 1  personalized icons*/ 
+
+
+#swiper-button-next1,#swiper-button-prev1{
+    color: transparent; 
+};
+
+
+
+#swiper-button-next1 img{
+    width: 35px;
+    height: 31px;   
+}
+#swiper-button-prev1 img{
+    width: 31px;
+    height: 31px;   
+}
+
+#imgnext1{
+    width: 25px;
+    height: 25px;   
+}
+
+/*  swiper 2  personalized icons*/ 
+
+#swiper-button-next2{
+    color: transparent; 
+    z-index: 99999;  
+}
+#swiper-button-prev2{
+    color: transparent;
+    z-index: 99999; 
+}
+
+
+/*  arrows center*/ 
+#swiper-button-next2{
+    position: absolute; 
+    transform: translateY(230%); 
+    /* z-index: 1; */
+    color: transparent; 
+    font-size: 30px; 
+    margin: 100px;
+    /* border-radius: 50%;  */
+
+}
+
+
+
+#swiper-button-next2 img{
+    width: 25px;
+    height: 25px;   
+    /* z-index: 99999;   */
+}
+
+#swiper-button-prev2 img{
+    width: 31px;
+    height: 31px;
+    /* z-index: 99999;    */
+}
+
+
+        /* Resultat de recherche , Image de recherche (SWIPER1) FIN------------------ */
+    /* Swiper2 --------------------------------------------- */
+.swiper-container2 {
+    margin-top: 100px; 
+}
+
+.swiper-button-next2 {
+    right: 10px;
+    transform: translateY(450%);
+}
+
+/*  450%  - 1200 */ 
+
+#swiper-button-prev2 {
+    transform: translateY(508%);
+    left: 10px;
+}
+
+
+
+/*  swiper 3  personalized icons*/ 
+
+#swiper-button-next3, #swiper-button-prev3  {
+    color: transparent; 
+}
+
+#swiper-button-next3 img{
+    width: 25px;
+    height: 25px;   
+}
+
+#swiper-button-prev3 img{
+    width: 31px;
+    height: 31px;   
+}
+
+
+
+
+
+
+ /* Swiper2  FIN--------------------------------------------- */
+ 
+  /* Genre comedy/romance ect...   et ligne--- DEBUT ------------- */
+.movie-genre{
+    font-family: "Inter", sans-serif;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding-top: 70px;
+
+}
+
+.genre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    gap: 30px;
+}
+
+.genre button {
+    display: inline-block;
+    color: aliceblue;
+    border: 0px;
+    background-color: transparent;
+    border-radius: 8px;
+    padding: 5px 10px; /* Ajusta el relleno para adaptarse al contenido */
+    font-size: 14px; /* Consistencia del texto */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; /* Asegura que el texto esté centrado */
+}
+
+.genre button:hover, .genre button.active {
+    background-color: #CC0000;
+    box-shadow: 0px 0px 10px rgba(204, 0, 0, 0.5); 
+    transform: scale(1.1); /* Escalado suave sin cambiar tamaño base */
+    cursor: pointer;
+}
+
+
+/* mine */ 
+
+
+.ligne{
+    margin-top: -20px;
+    margin-left: 30%;
+    width:600px ;
+    height: 1px;
+    background-color: aliceblue;
+
+} 
+
+ /* Genre comedy/romance ect...   et ligne--- FIN ------------- */
+ /* Swiper3 --------------------------------------------- */
+.swiper-container3 {
+    margin-bottom: 100px;
+       margin-top: 80px; 
+   }
+   .swiper-button-next3 {
+       right: 10px; 
+       transform: translateY(1900%);
+       /*2650*/
+   }
+   
+   .swiper-button-prev3 {
+    
+       transform: translateY(1900%);
+   }
+ /* Swiper3 --------------------FIN------------------------- */
+/* Toolbar(footer)-------------DEBUT-------------------------- */
+.toolbarDown{
+    
+    display: flex;
+    justify-content: space-around;
+    
+    background-color: #141517;
+    
+    align-items: center; 
+    width: 100%; 
+    padding: 15px 0px;
+    color: aliceblue;
+    padding-bottom: 80px;
+
+}
+.tooldown{
+    display: flex;
+    gap: 5px;
+    padding-top: 10px;
+
+}
+.toolbarDown{
+    max-width: 1075px ;
+    margin: 0 auto;
+    background-color: #141517;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0px;
+    color: white;
+    min-height: 185px;
+    color: #B8B8B8;
+    font-family: "Inria Sans", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    
+}
+
+footer{
+    background-color: #141517;
+}
+
+
+.toolbarDown a{
+    color: aliceblue;
+    font-size: 14px;
+    font-family: "Inria Sans", sans-serif;
+    font-weight: 700;
+    line-height: 17px;
+    /*mine*/
+
+}
+
+
+.toolTitreRightDown{
+    font-size: 36px;
+    color: #FFFFFF;
+    
+
+}
+.connection-site2{
+    background-color: rgb(20, 21, 23);
+    font-size: 16px;
+    color: aliceblue;
+    border: 0px;
+    font-family: "Inria Sans";
+    cursor: pointer;
+}
+.copyrith{
+    color: #ffffff70;
+}
+
+/* ToolBarDown(footer)-------------FIN------------------------- */
+
+/* Modale connection ------------DEBUT------------------- */
+
+.formulaire-connection-modale-BGround{
+    display: none; 
+    /* none */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    
+    z-index: 998; 
+}
+
+
+
+.formulaire-connection-POP {
+
+    position: block;
+z-index: 9999;
+
+    margin-left: 400px;
+    display: flex;
+    width: 410px;
+    height: 608px;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+   
+   position: fixed;
+   top: 40px;
+   right: 500px;
+   
+}
+.sign{
+    text-align: center;
+    height: 54px;
+    width: 144px;
+    color: #FFFFFF;
+    background-color:black;
+    border: solid 0.1px #ffffff;
+    border-right-color: transparent;
+    margin-left:  61px;
+    border-radius: 8px 0px 0px 8px;
+    font-size: 30px;
+    
+}
+.log{
+    /* display: flex; */
+    color: #FFFFFF;
+    height: 54px;
+    width: 144px;
+    background-color:#CC0000;
+    border-radius: 0px 8px 8px 0px;
+    font-size: 30px;
+}
+
+.sign ,.log{
+    font-size: 24px;
+    margin-top: 66px;
+    font-weight: 700;
+    padding-top: 14px;
+}
+.modaleInputUser{
+border-radius: 8px;
+margin-top: 60px;
+padding: 12px 100px 12px 20px;
+margin-left: -150px;
+}
+.modaleInputPass{
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 12px 100px 12px 20px;
+   margin-top: 30px;
+padding-top: 10px;
+margin-left: -150px;
+}
+.checkbox{
+    font-family: "Inter", sans-serif;
+  font-weight: 400;
+    margin-top: 5px;
+    margin-left: -300px;
+    font-size: 16px;
+  
+}
+.modaleBtnLogin{
+    font-family: "Inria Sans";
+    color: white;
+    background-color: #CC0000;
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 45px;
+    margin-left: -155px;
+    padding: 10px 110px 10px 115px;
+    border-radius: 8px;
+}
+.forget
+{
+    font-weight: 400;
+    font-family: "Inter", sans-serif;
+max-width: 350px;
+width: 250px;
+    margin-top: 40px;
+   margin-left: -190px;
+   font-size: 16px;
+   
+
+}
+.forget p:last-child{
+    margin-left: 41px;
+    font-size: 16px;
+}
+.forget span {
+    color: rgb(200, 26, 7);
+    
+}
+.forget :first-child {
+    color: rgb(200, 26, 7);
+    margin-left: -5px;
+}
+.signUp{
+    padding-left: 5px;
+}
+.XTarget1{
+    z-index: 5;
+    transform: rotate(135deg);
+    font-family: "Inter", sans-serif;
+    color: #FFFFFF;
+    margin-left: 16px;
+    margin-top: 8px;
+    position: absolute;
+}
+.XTarget2{
+    position: absolute;
+    transform: rotate(45deg);
+    font-family: "Inter", sans-serif;
+    color: #FFFFFF;
+    margin-top: 8px;
+    margin-left: 16px;
+    z-index: 4;
+    
+}
+.elispe{
+    
+    position: absolute;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+/* Modale Connection ------------FIN------------------- */
+/* Modale Film ------------DEBUT------------------- */
+.modale-film-BGound{
+  display: none; 
+  /* changer  */
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 998; 
+    
+}
+
+.modale-film{
+
+top: 90px;
+left: 340px;
+position: fixed;    
+z-index: 99998;
+background-color: black;
+width: 742px;
+height: 526px;
+max-width: 742px;
+max-height: 526px;
+display: block;
+/* test */ 
+
+}
+
+.image-film{
+    max-width: 234px;
+    max-height: 250px;
+    margin-left: 80px;
+    margin-top: 55px;
+}
+
+.titre-film{
+    font-weight: 700;
+    width: 280px;
+    font-size: 20px;
+    height: 40px;
+    /* background-color: aquamarine; */
+    margin-left: 400px;
+    margin-top: -250px;
+    font-family: "Inria Sans";
+    color: #CC0000;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+.annee-film{
+    font-family: "Inria Sans";
+    height: 20px;
+    /* background-color: aquamarine; */
+    width: 60px;
+    font-weight: 700;
+    margin-left: 400px;
+    margin-top: -20px;
+    color: white;
+    font-size: 14px;
+}
+
+/* MOI */ 
+.note-film {
+    color: #CC0000; 
+    font-weight: 700;
+    width: 320px;
+    height: 20px;
+    margin-left: 400px;
+    margin-top: 15px;
+    font-family: "Inria Sans";
+    letter-spacing: 1.1px;
+    font-size: 20px;
+
+}
+
+.genre-film{
+    color: white; 
+    font-weight: 700;
+    width: 320px;
+    height: 20px;
+    margin-left: 400px;
+    margin-top: 15px;
+    font-family: "Inria Sans";
+    letter-spacing: 1.1px;
+    font-size: 14px;
+}
+.synopsis-film{
+    font-weight: 300;
+    color: #FFFFFF;
+    font-family: "Inria Sans";
+    letter-spacing: 1px;
+    font-size: 16px;
+    word-wrap: break-word;
+    width: 280px;
+    height: 200px;
+    margin-left: 400px;
+    margin-top: 25px;
+    /* background-color: antiquewhite; */
+    overflow-y: auto; /* add vertica scroll    en cas ou  */
+    padding-right: 10px; /* scroll space */
+    margin-bottom: 10px;
+}
+.spanCast{
+    /* background-color: aquamarine; */
+    width: 20px;
+    font-weight: 700;
+    height: 30px;
+    margin-left: 400px;
+    margin-top: 26px;
+    font-weight: 700;
+    color: #FFFFFF;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-family: "Inria Sans";
+}
+.cast-here{
+    color: #FFFFFF;
+    font-size: 14px;
+    /* background-color: #1f2124; */
+    width: 240px;
+    height: 46px;
+    margin-left: 440px;
+    margin-top: -18px;
+    font-weight: 400;
+    font-family: "Inria Sans";
+    word-wrap: break-word;
+}
+
+/* Modale connection ------------FIN------------------- */
+
+.XTarget-global1{
+    cursor: pointer;
+    background-color: aquamarine !important;
+}
+
+
+/*   hover  --  CARDS INFO */ 
+
+
+.swiper-slide {
+    position: relative;
+}
+
+.movie-info {
+    position: absolute;
+    top: 0;
+    left: 17px;
+    /* position full content 17px - 9px */ 
+    width: 235px;
+    height: 351px;
+    background-color: rgba(0, 0, 0, 0.815); /* Fondo semitransparente */
+    /* color: #fff; */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Transición suave */
+    text-align: center;
+    padding: 10px;
+    word-wrap: break-word;  
+}
+
+
+
+
+
+/*
+.movie-info {
+    position: absolute;
+    top: 0;
+    left: 17px;
+    width: 235px;
+    height: 351px;
+    background-color: rgba(0, 0, 0, 0.815);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    padding: 10px;
+    word-wrap: break-word;  
+} */ 
+
+.swiper-slide:hover .movie-info {
+    opacity: 1; /* Muestra el tooltip en hover */
+    cursor: pointer;
+}
+
+.movie-info .movie-title {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 700;
+    line-height: 24px;
+    font-family: "Inter", sans-serif;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+    margin-top: 45px;
+}
+
+.movie-overview {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.movie-info .movie-release-date{
+    color: #B0B0B0;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    font-family: "Inter", sans-serif;
+    text-transform: capitalize;
+    word-wrap: break-word;
+    margin-bottom: 20px;
+}
+
+.movie-info .movies-genres{
+
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    font-family: "Inter", sans-serif;
+    text-transform: capitalize;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+} 
+
+.movie-info  .movies-votes{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    font-family: "Inter", sans-serif;
+    color: #CC0000;
+}
+
+.movies-genres{
+    white-space: pre-wrap; /* Permite saltos de línea dentro del texto */
+    overflow-wrap: break-word; /* Asegura que el texto largo se ajuste */
+    word-wrap: break-word; /* Soporte para navegadores más antiguos */
+    max-width: 230px ;
+}
+
+/*changes swiper  */ 
+
+
+#swiper-container1{
+    max-width: 1075px;
+    max-height: 351px;
+    width: 80%;
+    margin: auto;
+    /* border: dashed red; */
+    overflow: hidden;
+    display: none;  
+ };
+
+  /* display block */
+
+
+ #registerBtnHeader{
+    background-color: rgb(20, 21, 23);
+    font-size: 14px;
+    color: aliceblue;
+    border: 0px;
+    font-family: "Inria Sans";
+    cursor: pointer;
+    
+
+ }
+
+
+ #registerBtnFooter{
+    background-color: rgb(20, 21, 23);
+    font-size: 14px;
+    color: aliceblue;
+    border: 0px;
+    font-family: "Inria Sans";
+    cursor: pointer;
+ }
+
+ /* changes css */ 
+
+ .toolbarUP{
+    max-width: 1075px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+ }
+
+header{
+    background-color: #141517;
+}
+
+
+.text-section{
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+#signuptext1{
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #FFFFFF;
+    line-height: 29px;
+    letter-spacing: 3%;
+}
+
+#logintext1{
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #FFFFFF;
+    line-height: 29px;
+    letter-spacing: 3%;
+
+}
+
